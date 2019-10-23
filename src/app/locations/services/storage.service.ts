@@ -8,7 +8,8 @@ import { Position } from "../interfaces/position";
   providedIn: "root"
 })
 export class StorageService {
-  private localServer = "http://localhost:3000/locations/";
+  private localServer = "https://hwa-server.herokuapp.com/locations/";
+  // private localServer = "http://localhost:3000/locations/";
 
   constructor(private http: HttpClient) {}
 
