@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles */
+
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400|Lobster&display=swap");
+
+:root {
+  --color-primary: #0e87d8;
+
+  --color-light-0: #ffffff;
+  --color-light-1: #eeeeee;
+  --color-light-2: #d3d3d3;
+
+  --color-dark-0: #000000;
+  --color-dark-1: #1a1a1a;
+  --color-dark-2: #292929;
+}
+
+*,
+*:after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: var(--color-dark-2);
+}

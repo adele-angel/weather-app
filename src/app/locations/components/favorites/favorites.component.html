@@ -1,0 +1,52 @@
+<div class="favorites container">
+  <h3 class="favorites__title text-center my-3">My Favorite Locations</h3>
+
+  <!-- Preloader -->
+  <app-preloader [isLoading]="isLoading"></app-preloader>
+
+  <!-- Error loading favorites -->
+  <div *ngIf="error$ | async as error" class="text-center p-3">
+    <h4 class="text-primary"><i class="fas fa-exclamation-triangle"></i>&nbsp;Oops, something went wrong...</h4>
+    <p>
+      <span class="text-primary font-weight-bolder">{{ error.name }}:</span>
+      <span class="text-lowercase"> {{ error.statusText }}</span>
+    </p>
+    <p class="text-wrap text-break">{{ error.message }}</p>
+  </div>
+
+  <!-- No favorites -->
+  <div *ngIf="favorites$ | async as favorites" class="text-center p-3">
+    <div *ngIf="!favorites.length">
+      <h4 class="text-primary">
+        No favorite locations have been added
+        <i class="fas fa-heart-broken"></i>
+      </h4>
+      <p>Go back to <a routerLink="/">home</a> screen to search for locations</p>
+    </div>
+  </div>
+
+  <!-- Favorites list -->
+  <div
+    *ngIf="favorites$ | async as favorites"
+    class="favorites__list d-flex flex-column flex-md-row justify-content-center flex-wrap"
+  >
+    <!-- Favorites list item -->
+    <div
+      *ngFor="let favorite of favorites"
+      class="favorites__list-item card text-center shadow mx-2 align-self-stretch justify-self-stretch"
+      (click)="displayDetails(favorite.id)"
+    >
+      <div class="card-header">
+        <h5 class="text-white">{{ favorite.city }}</h5>
+        {{ favorite.country }}
+      </div>
+      <div class="card-body">
+        <img src="{{ createIconURL(favorite.weather.icon) }}" alt="{{ favorite.weather.icon }}" />
+        {{ convertTemperature(favorite.weather.temperature, favorite.isMetric) }}
+        <sup class="text-small">&#9900;</sup>{{ isMetric ? "C" : "F" }}
+        <br />
+        {{ favorite.weather.info }}
+      </div>
+    </div>
+  </div>
+</div>

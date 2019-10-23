@@ -1,4 +1,61 @@
-# NgrxWeatherApp
+<img src="./src/assets/images/logo.png" align="right" />
+
+# NgRX Weather App
+
+Live demo deployed on Heroku: https://hwa-client.herokuapp.com/
+
+Weather data using [AccuWeather API ![AccuWeather API](https://www.accuweather.com/images/logos/accuweather.svg)](https://www.accuweather.com/)
+For documentation see: https://developer.accuweather.com/
+
+## Built with
+
+- Angular 8
+- NgRX library
+- TypeScript, JavaScript
+- Bootstrap 4, CSS3, HTML5
+- Node.js
+
+## Prerequisites
+
+- Search weather by city
+- Add/remove favorite locations
+- Indication if location is already saved in favorites
+- Display Tel-Aviv weather by default
+- Clicking on a favorite will navigate to the main screen showing the details of that location
+- Reactive state management (Redux pattern)
+- Error handling
+
+## Features
+
+- Responsive design & animation
+- Theme change (dark/light mode)
+- Temperature unit change (Celsius/Fahrenheit)
+- Current Geolocation tracking
+
+## State tree chart
+
+<img src="./src/assets/images/state.png" alt="Redux DevTools" align="center" />
+
+## Usage
+
+```
+$ cd project-folder
+$ npm run dev
+```
+
+## Packages
+
+**Dependencies**
+
+```
+$ npm install --save @ngrx/store @ngrx/store-devtools @ngrx/effects @ngrx/entity bootstrap popper.js jquery
+```
+
+**Development dependencies**
+
+```
+$ npm install --save-dev json-server concurrently
+```
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.
 

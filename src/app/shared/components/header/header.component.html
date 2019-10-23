@@ -1,0 +1,61 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm navbar-dark swatch">
+  <div class="container-fluid">
+    <!-- Preloader -->
+    <app-preloader [isLoading]="isLoading"></app-preloader>
+
+    <!-- Logo -->
+    <a class="navbar-brand" routerLink="/" routerLinkActive="active">
+      <h1>Weather App</h1>
+    </a>
+
+    <!-- Current date -->
+    <span class="date">{{ currentDate | date: "medium" }}</span>
+
+    <!-- Theme controller -->
+    <a class="theme nav-link mr-auto">
+      <i class="text-warning" [ngClass]="isDarkTheme ? 'fa fa-sun' : 'fa fa-moon'" (click)="changeTheme()"></i>
+    </a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapse menu -->
+    <div class="collapse navbar-collapse" id="mobile-nav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            <i class="fas fa-home pr-2"></i>Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/favorites" routerLinkActive="active">
+            <i class="fab fa-gratipay pr-2"></i>Favorites
+          </a>
+        </li>
+        <!-- Theme controller -->
+        <li class="theme nav-item text-center">
+          <a class="nav-link">
+            <i class="text-warning" [ngClass]="isDarkTheme ? 'fa fa-sun' : 'fa fa-moon'" (click)="changeTheme()"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header partition -->
+<svg
+  id="curveDownColor"
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  width="100%"
+  height="80"
+  viewBox="0 0 100 100"
+  preserveAspectRatio="none"
+  class="partition swatch"
+>
+  <path d="M0 0 C 50 100 80 100 100 0 Z" />
+</svg>

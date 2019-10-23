@@ -1,0 +1,55 @@
+/* Homepage styles */
+
+/* Container */
+.homepage {
+  min-height: calc(100vh - 15rem);
+}
+
+/* Search */
+.searchbar button {
+  background-color: var(--color-primary);
+}
+.toggle-unit,
+.forecast__title,
+h4,
+h5 {
+  font-family: "Lobster", cursive;
+}
+.toggle-unit {
+  font-size: 2rem;
+}
+.toggle-unit i {
+  color: var(--color-primary);
+}
+.searchbar list-group-item {
+  cursor: pointer;
+}
+.searchbar list-group-item:hover {
+  background-color: var(--color-light-2);
+}
+
+/* Viewer */
+.viewer {
+  border: 0.2rem solid var(--color-primary);
+}
+.viewer__favorite-button {
+  color: var(--color-primary);
+  cursor: pointer;
+}
+.forecast__title {
+  color: var(--color-primary);
+}
+
+/* MQ */
+@media screen and (max-width: 780px) {
+  .toggle-unit {
+    font-size: 1.5rem;
+  }
+  .viewer__favorite-button,
+  .viewer__city-info {
+    margin: auto;
+  }
+  .viewer__city-info {
+    margin-bottom: 2rem;
+  }
+}

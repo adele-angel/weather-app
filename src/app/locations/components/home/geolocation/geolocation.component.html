@@ -1,0 +1,6 @@
+<div *ngIf="geolocation" class="geolocation text-center p-2 my-2">
+  <i class="fas fa-map-marker-alt"></i><span class="mx-1">You are here:</span>
+  <strong>{{ geolocation.LocalizedName }}</strong>
+  {{ geolocation.Country.LocalizedName }},&nbsp; {{ geolocation.Region.LocalizedName }}.
+  <strong>Coordinates:</strong>&nbsp; ({{ geolocation.GeoPosition.Latitude }}, {{ geolocation.GeoPosition.Longitude }})
+</div>

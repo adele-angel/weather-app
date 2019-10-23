@@ -1,0 +1,7 @@
+/* Geolocation styles */
+
+.geolocation i,
+.geolocation span {
+  font-weight: bold;
+  color: var(--color-primary);
+}

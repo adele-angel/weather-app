@@ -1,0 +1,372 @@
+{
+  "locations": [
+    {
+      "id": 58360,
+      "city": "Guilin",
+      "country": "China",
+      "isMetric": true,
+      "weather": {
+        "icon": 7,
+        "info": "Cloudy",
+        "temperature": 17.2
+      },
+      "forecast": {
+        "info": "Expect rainy weather late Thursday night through Friday morning",
+        "forecasts": [
+          {
+            "date": "2019-10-24T07:00:00+08:00",
+            "day": {
+              "icon": 7,
+              "phrase": "Cloudy"
+            },
+            "night": {
+              "icon": 12,
+              "phrase": "Showers"
+            },
+            "temperature": {
+              "min": 16,
+              "max": 20
+            }
+          },
+          {
+            "date": "2019-10-25T07:00:00+08:00",
+            "day": {
+              "icon": 12,
+              "phrase": "Showers"
+            },
+            "night": {
+              "icon": 12,
+              "phrase": "Showers"
+            },
+            "temperature": {
+              "min": 14,
+              "max": 19
+            }
+          },
+          {
+            "date": "2019-10-26T07:00:00+08:00",
+            "day": {
+              "icon": 12,
+              "phrase": "Showers"
+            },
+            "night": {
+              "icon": 12,
+              "phrase": "Showers"
+            },
+            "temperature": {
+              "min": 14,
+              "max": 18
+            }
+          },
+          {
+            "date": "2019-10-27T07:00:00+08:00",
+            "day": {
+              "icon": 12,
+              "phrase": "Showers"
+            },
+            "night": {
+              "icon": 12,
+              "phrase": "Showers"
+            },
+            "temperature": {
+              "min": 15,
+              "max": 23
+            }
+          },
+          {
+            "date": "2019-10-28T07:00:00+08:00",
+            "day": {
+              "icon": 12,
+              "phrase": "Showers"
+            },
+            "night": {
+              "icon": 36,
+              "phrase": "Intermittent clouds"
+            },
+            "temperature": {
+              "min": 15,
+              "max": 22
+            }
+          }
+        ]
+      },
+      "isFavorite": true
+    },
+    {
+      "id": 349727,
+      "city": "New York",
+      "country": "United States",
+      "isMetric": true,
+      "forecast": {
+        "info": "Expect rainy weather late Saturday night through Sunday afternoon",
+        "forecasts": [
+          {
+            "date": "2019-10-23T07:00:00-04:00",
+            "day": {
+              "icon": 2,
+              "phrase": "Mostly sunny"
+            },
+            "night": {
+              "icon": 33,
+              "phrase": "Clear"
+            },
+            "temperature": {
+              "min": 8.3,
+              "max": 18.3
+            }
+          },
+          {
+            "date": "2019-10-24T07:00:00-04:00",
+            "day": {
+              "icon": 1,
+              "phrase": "Sunny"
+            },
+            "night": {
+              "icon": 33,
+              "phrase": "Clear"
+            },
+            "temperature": {
+              "min": 10.6,
+              "max": 19.4
+            }
+          },
+          {
+            "date": "2019-10-25T07:00:00-04:00",
+            "day": {
+              "icon": 2,
+              "phrase": "Mostly sunny"
+            },
+            "night": {
+              "icon": 35,
+              "phrase": "Partly cloudy"
+            },
+            "temperature": {
+              "min": 10.6,
+              "max": 17.8
+            }
+          },
+          {
+            "date": "2019-10-26T07:00:00-04:00",
+            "day": {
+              "icon": 4,
+              "phrase": "Intermittent clouds"
+            },
+            "night": {
+              "icon": 12,
+              "phrase": "Showers"
+            },
+            "temperature": {
+              "min": 11.7,
+              "max": 16.6
+            }
+          },
+          {
+            "date": "2019-10-27T07:00:00-04:00",
+            "day": {
+              "icon": 18,
+              "phrase": "Rain"
+            },
+            "night": {
+              "icon": 35,
+              "phrase": "Partly cloudy"
+            },
+            "temperature": {
+              "min": 13.3,
+              "max": 16.7
+            }
+          }
+        ]
+      },
+      "weather": {
+        "icon": 1,
+        "info": "Sunny",
+        "temperature": 17.8
+      },
+      "isFavorite": true
+    },
+    {
+      "id": 226396,
+      "city": "Tokyo",
+      "country": "Japan",
+      "isMetric": false,
+      "weather": {
+        "icon": 7,
+        "info": "Cloudy",
+        "temperature": 64
+      },
+      "forecast": {
+        "info": "Rain from late Thursday night to Friday evening can lead to flooding",
+        "forecasts": [
+          {
+            "date": "2019-10-24T07:00:00+09:00",
+            "day": {
+              "icon": 6,
+              "phrase": "Mostly cloudy"
+            },
+            "night": {
+              "icon": 18,
+              "phrase": "Rain"
+            },
+            "temperature": {
+              "min": 61,
+              "max": 70
+            }
+          },
+          {
+            "date": "2019-10-25T07:00:00+09:00",
+            "day": {
+              "icon": 18,
+              "phrase": "Rain"
+            },
+            "night": {
+              "icon": 39,
+              "phrase": "Partly cloudy w/ showers"
+            },
+            "temperature": {
+              "min": 61,
+              "max": 67
+            }
+          },
+          {
+            "date": "2019-10-26T07:00:00+09:00",
+            "day": {
+              "icon": 3,
+              "phrase": "Partly sunny"
+            },
+            "night": {
+              "icon": 40,
+              "phrase": "Mostly cloudy w/ showers"
+            },
+            "temperature": {
+              "min": 61,
+              "max": 71
+            }
+          },
+          {
+            "date": "2019-10-27T07:00:00+09:00",
+            "day": {
+              "icon": 18,
+              "phrase": "Rain"
+            },
+            "night": {
+              "icon": 40,
+              "phrase": "Mostly cloudy w/ showers"
+            },
+            "temperature": {
+              "min": 58,
+              "max": 70
+            }
+          },
+          {
+            "date": "2019-10-28T07:00:00+09:00",
+            "day": {
+              "icon": 4,
+              "phrase": "Intermittent clouds"
+            },
+            "night": {
+              "icon": 34,
+              "phrase": "Mostly clear"
+            },
+            "temperature": {
+              "min": 60,
+              "max": 67
+            }
+          }
+        ]
+      },
+      "isFavorite": true
+    },
+    {
+      "id": 215854,
+      "city": "Tel Aviv",
+      "country": "Israel",
+      "isMetric": true,
+      "weather": {
+        "icon": 35,
+        "info": "Partly cloudy",
+        "temperature": 70
+      },
+      "forecast": {
+        "info": "Showers and a thunderstorm Wednesday evening through Thursday afternoon",
+        "forecasts": [
+          {
+            "date": "2019-10-23T07:00:00+03:00",
+            "day": {
+              "icon": 17,
+              "phrase": "Partly sunny w/ t-storms"
+            },
+            "night": {
+              "icon": 41,
+              "phrase": "Partly cloudy w/ t-storms"
+            },
+            "temperature": {
+              "min": 68,
+              "max": 80
+            }
+          },
+          {
+            "date": "2019-10-24T07:00:00+03:00",
+            "day": {
+              "icon": 17,
+              "phrase": "Partly sunny w/ t-storms"
+            },
+            "night": {
+              "icon": 35,
+              "phrase": "Partly cloudy"
+            },
+            "temperature": {
+              "min": 68,
+              "max": 81
+            }
+          },
+          {
+            "date": "2019-10-25T07:00:00+03:00",
+            "day": {
+              "icon": 4,
+              "phrase": "Intermittent clouds"
+            },
+            "night": {
+              "icon": 39,
+              "phrase": "Partly cloudy w/ showers"
+            },
+            "temperature": {
+              "min": 69,
+              "max": 82
+            }
+          },
+          {
+            "date": "2019-10-26T07:00:00+03:00",
+            "day": {
+              "icon": 6,
+              "phrase": "Mostly cloudy"
+            },
+            "night": {
+              "icon": 35,
+              "phrase": "Partly cloudy"
+            },
+            "temperature": {
+              "min": 68,
+              "max": 77
+            }
+          },
+          {
+            "date": "2019-10-27T07:00:00+03:00",
+            "day": {
+              "icon": 14,
+              "phrase": "Partly sunny w/ showers"
+            },
+            "night": {
+              "icon": 34,
+              "phrase": "Mostly clear"
+            },
+            "temperature": {
+              "min": 67,
+              "max": 79
+            }
+          }
+        ]
+      },
+      "isFavorite": true
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+/* Footer styles */
+
+footer {
+  height: 3rem;
+  background: var(--color-primary);
+  color: var(--color-light-0);
+  line-height: 3rem;
+  padding: 0 1rem;
+}

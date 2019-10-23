@@ -1,0 +1,133 @@
+<div class="homepage container">
+  <!-- Preloader -->
+  <app-preloader [isLoading]="isLoading"></app-preloader>
+
+  <!-- Geoposition -->
+  <app-geolocation></app-geolocation>
+
+  <!-- position search -->
+  <div
+    class="search d-flex flex-column flex-sm-row justify-content-around align-content-center align-items-center align-items-sm-baseline my-2"
+  >
+    <!-- Toggle unit type -->
+    <div class="toggle-unit btn px-2">
+      Choose Units:&nbsp;
+      <sup class="text-small">&#9900;</sup>{{ isMetric ? "C" : "F" }}&nbsp;
+      <i
+        class="fas fa-toggle-on"
+        [ngClass]="isMetric ? 'fa-rotate-180' : 'text-danger'"
+        (click)="isMetric = !isMetric; isUnitsChanged = !isUnitsChanged; setUnits()"
+      ></i>
+    </div>
+
+    <div class="searchbar d-flex flex-column">
+      <div class="searchbar-input">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Search position" #search />
+          <div class="input-group-append">
+            <button class="btn btn-primary" (click)="searchLocation(search.value)">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search selection list -->
+      <div *ngIf="positions$ && positions$ !== undefined && isSelectOpen" class="searchbar-select">
+        <ul class="list-group">
+          <li *ngFor="let position of positions$ | async" class="list-group-item" (click)="getLocation(position)">
+            <strong>{{ position.city }}</strong
+            >, {{ position.country }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- position viewer -->
+  <div class="viewer rounded p-md-3 p-sm-1">
+    <!-- Error -->
+    <div *ngIf="error$ | async as error" class="text-center p-5">
+      <h4 class="text-primary"><i class="fas fa-exclamation-triangle"></i>&nbsp;Oops, something went wrong...</h4>
+      <p>
+        <span class="text-primary font-weight-bolder">{{ error.name }}:</span>
+        <span class="text-lowercase"> {{ error.statusText }}</span>
+      </p>
+      <p class="text-wrap text-break">{{ error.message }}</p>
+    </div>
+
+    <!-- No selection -->
+    <div *ngIf="!position && position === undefined">
+      <h4 class="text-primary text-center"><i class="fas fa-map-marked-alt mr-2"></i>&nbsp;Pick A City!</h4>
+    </div>
+
+    <!-- Position details -->
+    <div *ngIf="position && position !== undefined && position.weather">
+      <div class="viewer__header d-flex flex-column flex-md-row">
+        <div class="viewer__city-info media border rounded shadow pt-3 px-3 mr-auto order-1 order-md-0">
+          <img
+            src="{{ createIconURL(position.weather.icon) }}"
+            alt="{{ position.weather.icon }}"
+            class="mr-3 mt-3 rounded-circle"
+          />
+          <div class="media-body">
+            <h5>
+              {{ position.city }}, <small>{{ position.country }}</small>
+            </h5>
+            <p>
+              {{ convertTemperature(position.weather.temperature, position.isMetric) }}
+              <sup class="text-small">&#9900;</sup>
+              {{ isMetric ? "C" : "F" }}
+              <br />
+              {{ position.weather.info }}
+            </p>
+          </div>
+        </div>
+
+        <!-- Favorite add | remove -->
+        <div class="viewer__favorite-button ml-auto order-0 order-md-1">
+          <i
+            [ngClass]="position.isFavorite ? 'fas fa-heart fa-2x text-danger' : 'far fa-heart fa-2x'"
+            (click)="position.isFavorite ? deleteFavorite(position) : addFavorite(position)"
+          ></i>
+        </div>
+      </div>
+
+      <!-- 5 day forecast -->
+      <div *ngIf="position.forecast" class="forecast">
+        <h3 class="forecast__title text-center mx-auto my-5">5 Day Forecast</h3>
+        <div
+          class="forecast__list d-flex flex-column flex-md-row flex-md-wrap flex-lg-nowrap justify-content-around justify-content-md-center"
+        >
+          <div
+            *ngFor="let forecast of position.forecast.forecasts"
+            class="forecast__list-item card shadow align-self-stretch justify-self-stretch flex-grow-0 flex-md-shrink-2"
+          >
+            <div class="card-header text-center">
+              <strong>{{ forecast.date | date: "EEEE" }}</strong>
+            </div>
+            <div class="card-body">
+              <p>
+                <img src="{{ createIconURL(forecast.day.icon) }}" alt="{{ forecast.day.icon }}" />
+                Day<br />
+                {{ forecast.day.phrase }}
+              </p>
+              <p>
+                <img src="{{ createIconURL(forecast.night.icon) }}" alt="{{ forecast.night.icon }}" />
+                Night<br />
+                {{ forecast.night.phrase }}
+              </p>
+              <hr />
+              <p>
+                Min: {{ convertTemperature(forecast.temperature.min, position.isMetric) }}
+                <sup class="text-small">&#9900;</sup>{{ isMetric ? "C" : "F" }} &nbsp; Max:
+                {{ convertTemperature(forecast.temperature.max, position.isMetric) }}
+                <sup class="text-small">&#9900;</sup>{{ isMetric ? "C" : "F" }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

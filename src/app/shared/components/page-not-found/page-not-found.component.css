@@ -1,0 +1,21 @@
+/* Page Not Found styles */
+
+/* Container */
+.pnf {
+  text-align: center;
+  margin: auto;
+  min-height: calc(100vh - 15rem);
+}
+
+.pnf h1,
+.pnf h3 {
+  color: var(--color-primary);
+}
+.pnf h1 {
+  font-family: "Lobster", cursive;
+}
+.pnf img {
+  height: 5rem;
+  margin: auto;
+  padding: 1rem;
+}

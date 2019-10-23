@@ -1,0 +1,34 @@
+/* Header styles */
+
+/* Navbar */
+.navbar {
+  color: var(--color-light-0);
+  background-color: var(--color-primary);
+}
+.navbar-brand {
+  font-family: "Lobster", cursive;
+}
+
+/* Theme controller */
+.theme {
+  cursor: pointer;
+}
+
+.partition {
+  fill: var(--color-primary);
+}
+
+/* MQ */
+@media screen and (max-width: 600px) {
+  .date {
+    display: none;
+  }
+  li.theme {
+    display: none;
+  }
+}
+@media screen and (min-width: 600px) {
+  a.theme {
+    display: none;
+  }
+}

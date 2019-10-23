@@ -1,0 +1,29 @@
+/* Favorites styles */
+
+/* Container */
+.favorites {
+  min-height: calc(100vh - 16rem);
+}
+
+.favorites .favorites__title,
+.favorites h3,
+.favorites h4,
+.favorites h5 {
+  font-family: "Lobster", cursive;
+  color: var(--color-primary);
+}
+
+/* Favorites list */
+.favorites .favorites__list-item {
+  cursor: pointer;
+}
+.favorites .favorites__list-item:hover {
+  border: 1px solid var(--color-primary);
+}
+.favorites .favorites__list-item .card-header {
+  color: var(--color-light-0);
+  background-color: var(--color-primary);
+}
+.favorites .favorites__list-item__btn-delete {
+  color: var(--color-primary);
+}
