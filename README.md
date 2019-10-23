@@ -4,7 +4,7 @@
 
 Live demo deployed on Heroku: https://ngrx-weather-app.herokuapp.com/
 
-Weather data using [AccuWeather API ![AccuWeather API](https://www.accuweather.com/images/logos/accuweather.svg)](https://www.accuweather.com/)
+Weather data using [AccuWeather API ![AccuWeather API](https://cdn6.aptoide.com/imgs/7/d/e/7de7463af4c637897bb0d521951e14b4_icon.png?w=50)](https://www.accuweather.com/)
 For documentation see: https://developer.accuweather.com/
 
 ## Built with
