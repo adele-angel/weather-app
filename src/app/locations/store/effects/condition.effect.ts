@@ -1,13 +1,13 @@
 import { Injectable } from "@angular/core";
 
 import { Observable, of } from "rxjs";
-import { map, mergeMap, catchError, tap } from "rxjs/operators";
+import { map, mergeMap, catchError } from "rxjs/operators";
 
 import { Action } from "@ngrx/store";
 import { Actions, Effect, ofType } from "@ngrx/effects";
 
 import * as locationsActions from "../actions";
-import * as fromServices from "@services/index";
+import * as fromServices from "../../services";
 
 import { Position } from "../../interfaces/position";
 
