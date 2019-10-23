@@ -2,7 +2,7 @@
 
 # NgRX Weather App
 
-Live demo deployed on Heroku: https://hwa-client.herokuapp.com/
+Live demo deployed on Heroku: https://ngrx-weather-app.herokuapp.com/
 
 Weather data using [AccuWeather API ![AccuWeather API](https://www.accuweather.com/images/logos/accuweather.svg)](https://www.accuweather.com/)
 For documentation see: https://developer.accuweather.com/
