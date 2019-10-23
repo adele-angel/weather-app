@@ -1,6 +1,6 @@
 {
   "/api/*": {
-    "target": "https://hwa-server.herokuapp.com/locations/",
+    "target": "https://hwa-server.herokuapp.com/",
     "secure": false,
     "changeOrigin": true,
     "logLevel": "debug"
