@@ -1,8 +1,8 @@
 <img src="./src/assets/images/logo.png" align="right" />
 
 # NgRX Weather App
-
-Live demo deployed on Heroku: https://ngrx-weather-app.herokuapp.com/
+**Note:** might need CORS extention on the browser
+Live demo deployed on Heroku: https://hwa-client.herokuapp.com/
 
 Weather data using [AccuWeather API ![AccuWeather API](https://cdn6.aptoide.com/imgs/7/d/e/7de7463af4c637897bb0d521951e14b4_icon.png?w=30)](https://www.accuweather.com/)
 For documentation see: https://developer.accuweather.com/
@@ -56,6 +56,12 @@ $ npm install --save @ngrx/store @ngrx/store-devtools @ngrx/effects @ngrx/entity
 ```
 $ npm install --save-dev json-server concurrently
 ```
+
+## Issues
+
+- CORS
+
+---
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.
 
