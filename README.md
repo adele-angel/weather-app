@@ -1,7 +1,9 @@
 <img src="./src/assets/images/logo.png" align="right" />
 
 # NgRX Weather App
+
 **Note:** might need CORS extention on the browser
+
 Live demo deployed on Heroku: https://hwa-client.herokuapp.com/
 
 Weather data using [AccuWeather API ![AccuWeather API](https://cdn6.aptoide.com/imgs/7/d/e/7de7463af4c637897bb0d521951e14b4_icon.png?w=30)](https://www.accuweather.com/)
